@@ -1,1 +1,51 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Long";
+  src: url("/fonts/long.woff");
+}
+
+@font-face {
+  font-family: "Round";
+  src: url("/fonts/round.woff");
+}
+
+@font-face {
+  font-family: "Round Bold";
+  font-weight: bold;
+  src: url("/fonts/round-bold.woff");
+}
+
+@theme {
+  --font-sans: "Round", sans-serif;
+  --font-long: "Long", sans-serif;
+  --font-round-bold: "Round Bold", sans-serif;
+  --color-yellow: #fff9cb;
+  --color-pink: #ffb0c4;
+  --breakpoint-sm: 40rem;
+  --breakpoint-xs: 20rem;
+  --breakpoint-3xl: 120rem;
+}
+
+body {
+  width: 100dvw;
+  overflow-x: hidden;
+  font-family: "Round", sans-serif;
+  background-color: black;
+}
+
+body ::selection {
+  background: #ffb0c4;
+  color: #36364e;
+}
+
+body ::-moz-selection {
+  background: #ffb0c4;
+  color: #36364e;
+}
+
+@layer components {
+  nav {
+    @apply fixed top-0 left-0 w-full flex justify-between items-center md:p-16 p-5 z-[100];
+  }
+}

@@ -15,9 +15,10 @@ export default function HomePage({
   const t = useTranslations("HomePage");
 
   return (
-    <div>
+    <main id="main">
+      {" "}
       <h1>{t("title")}</h1>
       {/* Your page content */}
-    </div>
+    </main>
   );
 }
