@@ -5,6 +5,7 @@ import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import NavBar from "./components/NavBar";
 import "./globals.css";
+import { ScrollTriggerProvider } from "./util/ScrollTriggerProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -30,8 +31,10 @@ export default async function RootLayout({ children, params }: Props) {
     <html lang={locale}>
       <body>
         <NextIntlClientProvider>
-          <NavBar />
-          {children}
+          <ScrollTriggerProvider>
+            <NavBar />
+            {children}
+          </ScrollTriggerProvider>
         </NextIntlClientProvider>
       </body>
     </html>

@@ -1,11 +1,7 @@
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/all';
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
 import Hero from "./components/Hero";
-
-gsap.registerPlugin(ScrollTrigger)
 
 export default function HomePage({
   params,
