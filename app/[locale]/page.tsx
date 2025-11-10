@@ -1,14 +1,14 @@
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
-import FinalVideo from "./components/FinalVideo";
-import Hero from "./components/Hero";
-import JasonInfo from "./components/JasonInfo";
-import JasonVideo from "./components/JasonVideo";
-import LuciaInfo from "./components/LuciaInfo";
-import LuciaVideo from "./components/LuciaVideo";
-import Outro from "./components/Outro";
-import ViceCity from "./components/ViceCity";
+import FinalVideo from "./sections/FinalVideo";
+import Hero from "./sections/Hero";
+import JasonInfo from "./sections/JasonInfo";
+import JasonVideo from "./sections/JasonVideo";
+import LuciaInfo from "./sections/LuciaInfo";
+import LuciaVideo from "./sections/LuciaVideo";
+import Outro from "./sections/Outro";
+import ViceCity from "./sections/ViceCity";
 
 export default function HomePage({
   params,

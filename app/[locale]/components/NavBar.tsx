@@ -1,5 +1,5 @@
 import Image from "next/image";
-import NavLogo from "./NavLogo";
+import NavLogo from "../sections/NavLogo";
 
 const NavBar = () => {
   return (
