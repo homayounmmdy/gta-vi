@@ -1,11 +1,12 @@
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
+import FinalVideo from "./components/FinalVideo";
 import Hero from "./components/Hero";
 import JasonInfo from "./components/JasonInfo";
 import JasonVideo from "./components/JasonVideo";
-import LuciaVideo from "./components/LuciaVideo";
 import LuciaInfo from "./components/LuciaInfo";
+import LuciaVideo from "./components/LuciaVideo";
 import ViceCity from "./components/ViceCity";
 
 export default function HomePage({
@@ -31,6 +32,8 @@ export default function HomePage({
       <LuciaInfo />
 
       <ViceCity />
+
+      <FinalVideo />
     </main>
   );
 }
