@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
 import Hero from "./components/Hero";
+import JasonVideo from "./components/JasonVideo";
 
 export default function HomePage({
   params,
@@ -18,6 +19,7 @@ export default function HomePage({
   return (
     <main id="main">
       <Hero />
+      <JasonVideo />
     </main>
   );
 }
