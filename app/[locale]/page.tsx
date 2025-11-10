@@ -4,6 +4,7 @@ import { use } from "react";
 import Hero from "./components/Hero";
 import JasonInfo from "./components/JasonInfo";
 import JasonVideo from "./components/JasonVideo";
+import LuciaVideo from "./components/LuciaVideo";
 
 export default function HomePage({
   params,
@@ -23,6 +24,8 @@ export default function HomePage({
 
       <JasonVideo />
       <JasonInfo />
+
+      <LuciaVideo />
     </main>
   );
 }
