@@ -6,6 +6,7 @@ import JasonInfo from "./components/JasonInfo";
 import JasonVideo from "./components/JasonVideo";
 import LuciaVideo from "./components/LuciaVideo";
 import LuciaInfo from "./components/LuciaInfo";
+import ViceCity from "./components/ViceCity";
 
 export default function HomePage({
   params,
@@ -28,6 +29,8 @@ export default function HomePage({
 
       <LuciaVideo />
       <LuciaInfo />
+
+      <ViceCity />
     </main>
   );
 }
