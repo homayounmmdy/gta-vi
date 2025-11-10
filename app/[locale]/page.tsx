@@ -7,6 +7,7 @@ import JasonInfo from "./components/JasonInfo";
 import JasonVideo from "./components/JasonVideo";
 import LuciaInfo from "./components/LuciaInfo";
 import LuciaVideo from "./components/LuciaVideo";
+import Outro from "./components/Outro";
 import ViceCity from "./components/ViceCity";
 
 export default function HomePage({
@@ -34,6 +35,7 @@ export default function HomePage({
       <ViceCity />
 
       <FinalVideo />
+      <Outro />
     </main>
   );
 }
