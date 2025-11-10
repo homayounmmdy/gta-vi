@@ -55,7 +55,7 @@ const Hero = () => {
                 <Image width={3560} height={1826} src="/images/hero-text.webp" alt="hero-logo" className="title-logo fade-out" />
                 <Image width={250} height={250} src="/images/watch-trailer.png" alt="trailer" className="trailer-logo fade-out" />
                 <div className="play-img fade-out">
-                    <Image width={64} height={64} src="/images/play.svg" alt="play" className="w-7 ml-1" />
+                    <Image width={64} height={64} src="/images/play.svg" alt="play" className="w-9 ml-1" />
                 </div>
             </div>
             <div>
