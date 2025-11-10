@@ -3,6 +3,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
 import GameConsolesIcon from "../components/GameConsolesIcon";
+import GradientComingDate from "../components/GradientComingDate";
 
 const Outro = () => {
   useGSAP(() => {
@@ -34,17 +35,19 @@ const Outro = () => {
   return (
     <section className="final-message">
       <div className="h-full col-center gap-10">
-                <Image width={198} height={132} src="/images/logo.webp" alt="logo" className="entrance-logo" />
-        
+        <Image
+          width={198}
+          height={132}
+          src="/images/logo.webp"
+          alt="logo"
+          className="entrance-logo"
+        />
 
         <div>
-          <h3 className="gradient-title">
-            Coming <br />
-            May 26th <br /> 2026
-          </h3>
+          <GradientComingDate />
         </div>
 
-       <GameConsolesIcon />
+        <GameConsolesIcon />
       </div>
     </section>
   );

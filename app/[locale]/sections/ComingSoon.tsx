@@ -1,5 +1,6 @@
 import Image from "next/image";
 import GameConsolesIcon from "../components/GameConsolesIcon";
+import GradientComingDate from "../components/GradientComingDate";
 
 const ComingSoon = () => {
   return (
@@ -14,10 +15,7 @@ const ComingSoon = () => {
         />
 
         <div className="text-wrapper">
-          <h3 className="gradient-title">
-            Coming <br />
-            May 26th <br /> 2026
-          </h3>
+          <GradientComingDate />
         </div>
 
         <GameConsolesIcon />
