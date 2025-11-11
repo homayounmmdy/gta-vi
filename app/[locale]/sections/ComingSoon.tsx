@@ -5,7 +5,7 @@ import GradientComingDate from "../components/GradientComingDate";
 const ComingSoon = () => {
   return (
     <section className="entrance-message">
-      <div className="h-full col-center gap-10">
+      <div className="h-full col-center gap-8">
         <Image
           width={198}
           height={132}
