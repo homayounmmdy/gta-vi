@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { useRef } from "react";
 
 const LuciaVideo = () => {
-  const videoRef = useRef(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useGSAP(() => {
     gsap.set(".lucia", {
@@ -28,17 +28,21 @@ const LuciaVideo = () => {
       ease: "power1.inOut",
     });
 
-    videoRef.current.onloadedmetadata = () => {
-      tl.to(
-        videoRef.current,
-        {
-          currentTime: videoRef.current.duration,
-          duration: 3,
-          ease: "power1.inOut",
-        },
-        "<"
-      );
-    };
+    const videoElement = videoRef.current;
+    if(videoElement) {
+      
+      videoElement.onloadedmetadata = () => {
+        tl.to(
+          videoElement,
+          {
+            currentTime: videoElement.duration,
+            duration: 3,
+            ease: "power1.inOut",
+          },
+          "<"
+        );
+      };
+    }
   });
   return (
     <section className="lucia">

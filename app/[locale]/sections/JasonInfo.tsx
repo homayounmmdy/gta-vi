@@ -1,7 +1,11 @@
 "use client";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
 const JasonInfo = () => {
   useGSAP(() => {
@@ -9,33 +13,50 @@ const JasonInfo = () => {
       marginTop: "-80vh",
     });
 
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: ".jason",
-          start: "top 90%",
-          end: "10% center",
-          scrub: 2,
-        },
-      })
-      .to(".first-vd", { opacity: 0, duration: 1, ease: "power1.inOut" });
+    // Create a timeline with ScrollTrigger
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".jason",
+        start: "top 90%",
+        end: "10% center",
+        scrub: 2,
+      },
+    });
 
-    gsap.to(
-      ".jason .img-box",
-      {
-        scrollTrigger: {
-          trigger: ".jason",
-          start: "top center",
-          end: "80% center",
-          scrub: 2,
-        },
+    // Add animations to the timeline
+    tl.to(".first-vd", { opacity: 0, duration: 1, ease: "power1.inOut" })
+     .to(".jason .img-box", {
         y: -300,
         duration: 1,
         ease: "power1.inOut",
-      },
-      "<"
-    );
+      }, "<"); // The "<" positions this animation to start at the same time as the previous one
+
+    // Alternative: If you want separate ScrollTriggers for each animation
+    // gsap.to(".first-vd", {
+    //   opacity: 0,
+    //   duration: 1,
+    //   ease: "power1.inOut",
+    //   scrollTrigger: {
+    //     trigger: ".jason",
+    //     start: "top 90%",
+    //     end: "10% center",
+    //     scrub: 2,
+    //   },
+    // });
+    // 
+    // gsap.to(".jason .img-box", {
+    //   y: -300,
+    //   duration: 1,
+    //   ease: "power1.inOut",
+    //   scrollTrigger: {
+    //     trigger: ".jason",
+    //     start: "top center",
+    //     end: "80% center",
+    //     scrub: 2,
+    //   },
+    // });
   });
+  
   return (
     <section className="jason">
       <div className="max-w-lg jason-content">

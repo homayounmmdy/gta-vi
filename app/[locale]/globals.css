@@ -35,15 +35,14 @@ body {
 }
 
 body ::selection {
-    background: #ffb0c4;
-    color: #36364e
+  background: #ffb0c4;
+  color: #36364e;
 }
 
 body ::-moz-selection {
-    background: #ffb0c4;
-    color: #36364e
+  background: #ffb0c4;
+  color: #36364e;
 }
-
 
 main {
   background: linear-gradient(
@@ -111,7 +110,7 @@ main {
     @apply absolute inset-0 w-full h-dvh overflow-hidden z-20 opacity-100;
 
     .entrance-logo {
-      @apply  3xl:w-72 md:w-56 w-48 absolute xs:top-38 sm:top-[12.8rem] md:top-34  3xl:top-40 left-1/2 -translate-x-1/2;
+      @apply 3xl:w-72 md:w-56 w-48 absolute xs:top-38 sm:top-[12.8rem] md:top-34  3xl:top-40 left-1/2 -translate-x-1/2;
     }
 
     .text-wrapper {

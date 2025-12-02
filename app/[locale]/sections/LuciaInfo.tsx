@@ -9,18 +9,16 @@ const LuciaInfo = () => {
       marginTop: "-80vh",
     });
 
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: ".lucia-life",
-          start: "top 80%",
-          end: "10% center",
-          scrub: 2,
-        },
-      })
-      .to(".second-vd", { opacity: 0, duration: 1, ease: "power1.inOut" });
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".lucia-life",
+        start: "top 80%",
+        end: "10% center",
+        scrub: 2,
+      },
+    });
 
-    gsap.to(
+    tl.to(".second-vd", { opacity: 0, duration: 1, ease: "power1.inOut" }).to(
       ".lucia-life .img-box",
       {
         scrollTrigger: {

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useRef } from "react";
 
 const ViceCity = () => {
-  const videoRef = useRef(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useGSAP(() => {
     const tl = gsap.timeline({
@@ -17,17 +17,20 @@ const ViceCity = () => {
       },
     });
 
-    videoRef.current.onloadedmetadata = () => {
-      tl.to(
-        videoRef.current,
-        {
-          currentTime: videoRef.current.duration,
-          duration: 3,
-          ease: "power1.inOut",
-        },
-        "<"
-      );
-    };
+    const videoElement = videoRef.current;
+    if (videoElement) {
+      videoElement.onloadedmetadata = () => {
+        tl.to(
+          videoElement,
+          {
+            currentTime: videoElement.duration,
+            duration: 3,
+            ease: "power1.inOut",
+          },
+          "<"
+        );
+      };
+    }
   });
   return (
     <section className="post-card">
